@@ -51,6 +51,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'common.apps.CommonConfig',
+    'fleet.apps.FleetConfig',
 ]
 
 MIDDLEWARE = [
@@ -136,3 +138,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+CITIES_LIGHT_TRANSLATION_LANGUAGES = ['fr', 'en']
+CITIES_LIGHT_INCLUDE_COUNTRIES = ['FR']
+CITIES_LIGHT_INCLUDE_CITY_TYPES = ['PPL', 'PPLA', 'PPLA2', 'PPLA3', 'PPLA4', 'PPLC', 'PPLF', 'PPLG', 'PPLL', 'PPLR', 'PPLS', 'STLMT',]
