@@ -14,3 +14,7 @@ How to run project:
 --------------
 * `pip install -r requirements.txt`
 * `cp secrets.json.default secrets.json`
+* Update secrets.json according to the requirements.
+* `python manage.py makemigrations`
+* `python manage.py migrate`
+* `python manage.py runserver`
