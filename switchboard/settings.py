@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'common.apps.CommonConfig',
     'fleet.apps.FleetConfig',
+    'agent.apps.AgentConfig',
     'rest_framework',
 ]
 

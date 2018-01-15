@@ -1,6 +1,5 @@
 from .viewsets import (
-    FleetOwnerViewSet, CommissionAgentViewSet,
-    OperationViewSet, FeedViewSet, VehicleViewSet
+    FleetOwnerViewSet, OperationViewSet, FeedViewSet, VehicleViewSet
 )
 from django.conf.urls import url
 from django.urls import path
@@ -12,19 +11,6 @@ fleet_owner_list = FleetOwnerViewSet.as_view({
 })
 
 fleet_owner_detail = FleetOwnerViewSet.as_view({
-    'get': 'retrieve',
-    'put': 'update',
-    'patch': 'partial_update',
-    'delete': 'destroy'
-})
-
-
-commission_agent_list = CommissionAgentViewSet.as_view({
-    'get': 'list',
-    'post': 'create',
-})
-
-commission_agent_detail = CommissionAgentViewSet.as_view({
     'get': 'retrieve',
     'put': 'update',
     'patch': 'partial_update',
@@ -74,8 +60,6 @@ vehicle_detail = VehicleViewSet.as_view({
 urlpatterns = [
     url(r'^fleet_owner/$', fleet_owner_list),
     url(r'^fleet_owner/(?P<pk>[0-9]+)/$$', fleet_owner_detail),
-    url(r'^commission_agent/$', commission_agent_list),
-    url(r'^commission_agent/(?P<pk>[0-9]+)/$$', commission_agent_detail),
     url(r'^operation/$', operation_list),
     url(r'^operation/(?P<pk>[0-9]+)/$$', operation_detail),
     url(r'^feed/$', feed_list),
