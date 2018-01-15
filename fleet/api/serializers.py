@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from fleet.models import (
-    FleetOwner, CommissionAgent, Operation, Feed, Vehicle
+    FleetOwner, Operation, Feed, Vehicle
 )
 
 
@@ -8,12 +8,6 @@ class FleetOwnerSerializer(serializers.ModelSerializer):
     class Meta:
         model = FleetOwner
         fields = ("id", "name", "address", "email", "phone", "meta")
-
-
-class CommissionAgentSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = CommissionAgent
-        fields = ("id", "name", "phone", "email", "hub", "meta")
 
 
 class OperationSerializer(serializers.ModelSerializer):

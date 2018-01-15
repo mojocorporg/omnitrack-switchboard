@@ -23,30 +23,11 @@ class FleetOwner(TimeStampModel):
         verbose_name_plural = "Fleet Owners"
 
 
-class CommissionAgent(TimeStampModel):
-    """Commssion Agent Model."""
-
-    def meta_default():
-        return {"abc": "xyz"}
-
-    name = models.CharField(
-        max_length=255,
-        default=None
-    )
-    phone = models.CharField(max_length=15)
-    email = models.EmailField(max_length=255)
-    hub = models.CharField(max_length=15)
-    meta = JSONField(default=meta_default)
-
-    class Meta:
-        verbose_name_plural = "Commission Agents"
-
-
 class Operation(TimeStampModel):
     """Operation Model."""
 
     commission_agent = models.ForeignKey(
-        "CommissionAgent",
+        "agent.CommissionAgent",
         on_delete=models.CASCADE
     )
     fleet_owner = models.ForeignKey(
