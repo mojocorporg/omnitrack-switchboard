@@ -1,4 +1,6 @@
 from django.db import models
+from django.contrib.postgres.fields import JSONField
+
 
 # Create your models here.
 class TimeStampModel(models.Model):
@@ -54,24 +56,3 @@ class City(TimeStampModel):
 
     class Meta:
         verbose_name_plural = "Cities"
-
-
-FUEL_TYPE_CHOICE = (
-    ("Deisel", "Deisel"),
-    ("Petrol", "Petrol")
-)
-
-
-class Vehicle(TimeStampModel):
-    """Model for Vehicle."""
-
-    name = models.CharField(max_length=255)
-    brand = models.CharField(max_length=255)
-    model = models.CharField(max_length=255)
-    model_number = models.CharField(max_length=255)
-    registration_number = models.CharField(max_length=255)
-    chasis_number = models.CharField(max_length=255)
-    engine_number = models.CharField(max_length=255)
-    body_type = models.CharField(max_length=255)
-    fuel_type = models.CharField(max_length=100, choices=FUEL_TYPE_CHOICE)
-    color = models.CharField(max_length=255)
