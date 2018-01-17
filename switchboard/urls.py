@@ -16,6 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import include
+from rest_framework.authtoken import views as authtoken_views
+
+admin.site.site_title = "Switchboard Site Admin"
+admin.site.site_header = "Switchboard Administration"
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,3 +28,8 @@ urlpatterns = [
     path('common/', include('common.urls')),
     path('agent/', include('agent.urls')),
 ]
+
+# Auth Token URL's
+urlpatterns.append(
+    path('api-token-auth/', authtoken_views.obtain_auth_token)
+)
