@@ -28,7 +28,7 @@ class VehicleSerializer(serializers.ModelSerializer):
     class Meta:
         model = Vehicle
         fields = (
-            "id", "name", "brand", "model", "model_number", "registration_number"
-            "chasis_number", "engine_number", "body_type", "fuel_type", "color",
+            "id", "name", "brand", "model", "model_number", "registration_number",
+            "chassis_number", "engine_number", "body_type", "fuel_type", "color",
             "meta", "fleet_owner",
         )
