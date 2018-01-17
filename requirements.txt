@@ -3,3 +3,4 @@ psycopg2
 djangorestframework==3.7.7
 django-filter
 markdown
+django-rest-swagger>=2.0<3.0
