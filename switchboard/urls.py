@@ -18,6 +18,7 @@ from django.urls import path, reverse
 from django.conf.urls import include
 from django.views.generic.base import RedirectView
 from rest_framework.authtoken import views as authtoken_views
+from rest_framework_swagger.views import get_swagger_view
 
 admin.site.site_title = "Switchboard Site Admin"
 admin.site.site_header = "Switchboard Administration"
@@ -35,7 +36,8 @@ urlpatterns.append(
     path('api-token-auth/', authtoken_views.obtain_auth_token)
 )
 
-# Redirect main URL's to Admin
+schema_view = get_swagger_view(title='Pastebin API')
+
 urlpatterns.append(
-    path('', RedirectView.as_view(url=reverse('admin:index')))
+    path('', schema_view)
 )
