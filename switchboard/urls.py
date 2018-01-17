@@ -14,8 +14,9 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, reverse
 from django.conf.urls import include
+from django.views.generic.base import RedirectView
 from rest_framework.authtoken import views as authtoken_views
 
 admin.site.site_title = "Switchboard Site Admin"
@@ -32,4 +33,9 @@ urlpatterns = [
 # Auth Token URL's
 urlpatterns.append(
     path('api-token-auth/', authtoken_views.obtain_auth_token)
+)
+
+# Redirect main URL's to Admin
+urlpatterns.append(
+    path('', RedirectView.as_view(url=reverse('admin:index')))
 )
