@@ -66,7 +66,7 @@ class Vehicle(TimeStampModel):
     model = models.CharField(max_length=255)
     model_number = models.CharField(max_length=255)
     registration_number = models.CharField(max_length=255)
-    chasis_number = models.CharField(max_length=255)
+    chassis_number = models.CharField(max_length=255)
     engine_number = models.CharField(max_length=255)
     body_type = models.CharField(max_length=255)
     fuel_type = models.CharField(max_length=100, choices=FUEL_TYPE_CHOICE)
