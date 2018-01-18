@@ -36,7 +36,7 @@ urlpatterns.append(
     path('api-token-auth/', authtoken_views.obtain_auth_token)
 )
 
-schema_view = get_swagger_view(title='Pastebin API')
+schema_view = get_swagger_view(title='Switchboard API')
 
 urlpatterns.append(
     path('', schema_view)
