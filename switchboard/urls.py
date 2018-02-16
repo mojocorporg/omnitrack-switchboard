@@ -14,8 +14,30 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, reverse
+from django.conf.urls import include
+from django.views.generic.base import RedirectView
+from rest_framework.authtoken import views as authtoken_views
+from rest_framework_swagger.views import get_swagger_view
+
+admin.site.site_title = "Switchboard Site Admin"
+admin.site.site_header = "Switchboard Administration"
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api-auth/', include('rest_framework.urls')),
+    path('fleet/', include('fleet.urls')),
+    path('common/', include('common.urls')),
+    path('agent/', include('agent.urls')),
 ]
+
+# Auth Token URL's
+urlpatterns.append(
+    path('api-token-auth/', authtoken_views.obtain_auth_token)
+)
+
+schema_view = get_swagger_view(title='Switchboard API')
+
+urlpatterns.append(
+    path('', schema_view)
+)
