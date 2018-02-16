@@ -24,7 +24,7 @@ admin.site.site_title = "Switchboard Site Admin"
 admin.site.site_header = "Switchboard Administration"
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('', admin.site.urls),
     path('api-auth/', include('rest_framework.urls')),
     path('fleet/', include('fleet.urls')),
     path('common/', include('common.urls')),
@@ -39,5 +39,5 @@ urlpatterns.append(
 schema_view = get_swagger_view(title='Switchboard API')
 
 urlpatterns.append(
-    path('', schema_view)
+    path('docs/', schema_view)
 )
