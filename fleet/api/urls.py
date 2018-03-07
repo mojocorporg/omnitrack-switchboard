@@ -1,5 +1,6 @@
 from .viewsets import (
-    FleetOwnerViewSet, OperationViewSet, FeedViewSet, VehicleViewSet
+    FleetOwnerViewSet, OperationViewSet, FeedViewSet, VehicleViewSet,
+    VehicleTypeViewSet, LeadViewSet, QuoteViewSet, JobViewSet, RatingViewSet
 )
 from django.conf.urls import url
 from django.urls import path
@@ -44,6 +45,71 @@ feed_detail = FeedViewSet.as_view({
 })
 
 
+vehicletype_list = VehicleTypeViewSet.as_view({
+    'get': 'list',
+    'post': 'create',
+})
+
+vehicletype_detail = VehicleTypeViewSet.as_view({
+    'get': 'retrieve',
+    'put': 'update',
+    'patch': 'partial_update',
+    'delete': 'destroy'
+})
+
+
+lead_list = LeadViewSet.as_view({
+    'get': 'list',
+    'post': 'create',
+})
+
+lead_detail = LeadViewSet.as_view({
+    'get': 'retrieve',
+    'put': 'update',
+    'patch': 'partial_update',
+    'delete': 'destroy'
+})
+
+
+quote_list = QuoteViewSet.as_view({
+    'get': 'list',
+    'post': 'create',
+})
+
+quote_detail = QuoteViewSet.as_view({
+    'get': 'retrieve',
+    'put': 'update',
+    'patch': 'partial_update',
+    'delete': 'destroy'
+})
+
+
+job_list = JobViewSet.as_view({
+    'get': 'list',
+    'post': 'create',
+})
+
+job_detail = JobViewSet.as_view({
+    'get': 'retrieve',
+    'put': 'update',
+    'patch': 'partial_update',
+    'delete': 'destroy'
+})
+
+
+rating_list = RatingViewSet.as_view({
+    'get': 'list',
+    'post': 'create',
+})
+
+rating_detail = RatingViewSet.as_view({
+    'get': 'retrieve',
+    'put': 'update',
+    'patch': 'partial_update',
+    'delete': 'destroy'
+})
+
+
 vehicle_list = VehicleViewSet.as_view({
     'get': 'list',
     'post': 'create',
@@ -66,4 +132,14 @@ urlpatterns = [
     url(r'^feed/(?P<pk>[0-9]+)/$$', feed_detail),
     url(r'^vehicle/$', vehicle_list),
     url(r'^vehicle/(?P<pk>[0-9]+)/$$', vehicle_detail),
+    url(r'^vehicletype/$', vehicletype_list),
+    url(r'^vehicletype/(?P<pk>[0-9]+)/$$', vehicletype_detail),
+    url(r'^lead/$', lead_list),
+    url(r'^lead/(?P<pk>[0-9]+)/$$', lead_detail),
+    url(r'^quote/$', quote_list),
+    url(r'^quote/(?P<pk>[0-9]+)/$$', quote_detail),
+    url(r'^job/$', job_list),
+    url(r'^job/(?P<pk>[0-9]+)/$$', job_detail),
+    url(r'^rating/$', rating_list),
+    url(r'^rating/(?P<pk>[0-9]+)/$$', rating_detail),
 ]

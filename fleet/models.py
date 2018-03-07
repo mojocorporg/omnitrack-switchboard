@@ -1,6 +1,7 @@
 from django.contrib.postgres.fields import JSONField
 from django.db import models
 from common.models import TimeStampModel
+from django.contrib.auth.models import User
 
 
 # Create your models here.
@@ -10,10 +11,7 @@ class FleetOwner(TimeStampModel):
     def meta_default():
         return {"abc": "xyz"}
 
-    name = models.CharField(
-        max_length=255,
-        default=None
-    )
+    fleet_owner = models.OneToOneField(User, on_delete=models.CASCADE)
     address = models.TextField()
     email = models.EmailField(max_length=255)
     phone = models.CharField(max_length=15)
@@ -78,6 +76,11 @@ class Vehicle(TimeStampModel):
     )
 
 
+class VehicleType(TimeStampModel):
+    """Model for Vehicle."""
+    type = models.CharField(max_length=255)
+
+
 class Feed(TimeStampModel):
     """Feed Model."""
 
@@ -92,3 +95,70 @@ class Feed(TimeStampModel):
 
     class Meta:
         verbose_name_plural = "Feeds"
+
+
+class Lead(TimeStampModel):
+    """Leads Model."""
+
+    commission_agent = models.ForeignKey(
+        "agent.CommissionAgent",
+        on_delete=models.CASCADE
+    )
+    source = models.ForeignKey(
+        "common.City",
+        on_delete=models.CASCADE,
+        related_name="lead_source"
+    )
+    destination = models.ForeignKey(
+        "common.City",
+        on_delete=models.CASCADE,
+        related_name="lead_destination"
+    )
+    departure_date = models.DateField()
+    vehicle = models.ForeignKey(
+        "Vehicle",
+        on_delete=models.CASCADE
+    )
+    material_to_carried = models.CharField(max_length=255)
+    weight = models.CharField(max_length=20)
+
+
+class Quote(TimeStampModel):
+    """Quote Models"""
+    lead = models.ForeignKey(
+        Lead, on_delete=models.CASCADE
+    )
+    commission_agent = models.ForeignKey(
+        "agent.CommissionAgent",
+        on_delete=models.CASCADE
+    )
+    vehicle = models.ForeignKey(
+        "Vehicle",
+        on_delete=models.CASCADE
+    )
+    price = models.CharField(max_length=100)
+    etd = models.CharField(max_length=255, verbose_name="Estimated time of Delivery")
+
+
+class Job(TimeStampModel):
+    """Job Models."""
+    quote = models.ForeignKey(
+        Quote, on_delete=models.CASCADE
+    )
+    delivery_date = models.DateField()
+
+
+class Rating(TimeStampModel):
+    """Rating Models"""
+    RATED_ENTITY_CHOICE = (
+        (1, "Commission Agent"),
+        (2, "Fleet Owner")
+    )
+    job = models.ForeignKey(
+        Job, on_delete=models.CASCADE
+    )
+    rated_entity = models.PositiveSmallIntegerField(
+        choices=RATED_ENTITY_CHOICE
+    )
+    rating = models.CharField(max_length=50)
+    review = models.TextField()

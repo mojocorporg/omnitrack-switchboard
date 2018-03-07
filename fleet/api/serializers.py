@@ -1,13 +1,14 @@
 from rest_framework import serializers
 from fleet.models import (
-    FleetOwner, Operation, Feed, Vehicle
+    FleetOwner, Operation, Feed, Vehicle, VehicleType,
+    Lead, Rating, Job, Quote
 )
 
 
 class FleetOwnerSerializer(serializers.ModelSerializer):
     class Meta:
         model = FleetOwner
-        fields = ("id", "name", "address", "email", "phone", "meta")
+        fields = ("id", "fleet_owner", "address", "email", "phone", "meta")
 
 
 class OperationSerializer(serializers.ModelSerializer):
@@ -31,4 +32,47 @@ class VehicleSerializer(serializers.ModelSerializer):
             "id", "name", "brand", "model", "model_number", "registration_number",
             "chassis_number", "engine_number", "body_type", "fuel_type", "color",
             "meta", "fleet_owner",
+        )
+
+
+class VehicleTypeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = VehicleType
+        fields = (
+            "id", "type"
+        )
+
+
+class LeadSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Lead
+        fields = (
+            "id", "commission_agent", "source", "destination",
+            "departure_date", "vehicle", "material_to_carried",
+            "weight"
+        )
+
+
+class QuoteSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Quote
+        fields = (
+            "id", "lead", "commission_agent", "vehicle",
+            "price", "etd"
+        )
+
+
+class JobSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Job
+        fields = (
+            "id", "quote", "delivery_date"
+        )
+
+
+class RatingSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Rating
+        fields = (
+            "id", "job", "rated_entity", "rating", "review"
         )
