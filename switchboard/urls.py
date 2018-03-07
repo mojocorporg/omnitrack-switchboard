@@ -19,6 +19,7 @@ from django.conf.urls import include
 from django.views.generic.base import RedirectView
 from rest_framework.authtoken import views as authtoken_views
 from rest_framework_swagger.views import get_swagger_view
+from .views import get_auth_token
 
 admin.site.site_title = "Switchboard Site Admin"
 admin.site.site_header = "Switchboard Administration"
@@ -33,7 +34,7 @@ urlpatterns = [
 
 # Auth Token URL's
 urlpatterns.append(
-    path('api-token-auth/', authtoken_views.obtain_auth_token)
+    path('api-token-auth/', get_auth_token)
 )
 
 schema_view = get_swagger_view(title='Switchboard API')
