@@ -16,5 +16,8 @@ class CommissionAgent(TimeStampModel):
     hub = models.CharField(max_length=15)
     meta = JSONField(default=meta_default)
 
+    def __str__(self):
+        return self.agent.username
+
     class Meta:
         verbose_name_plural = "Commission Agents"
