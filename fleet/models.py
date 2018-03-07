@@ -13,9 +13,11 @@ class FleetOwner(TimeStampModel):
 
     fleet_owner = models.OneToOneField(User, on_delete=models.CASCADE)
     address = models.TextField()
-    email = models.EmailField(max_length=255)
     phone = models.CharField(max_length=15)
     meta = JSONField(default=meta_default)
+
+    def __str__(self):
+        return self.fleet_owner.username
 
     class Meta:
         verbose_name_plural = "Fleet Owners"
