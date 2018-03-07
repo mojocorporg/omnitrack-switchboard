@@ -8,7 +8,7 @@ from fleet.models import (
 class FleetOwnerSerializer(serializers.ModelSerializer):
     class Meta:
         model = FleetOwner
-        fields = ("id", "fleet_owner", "address", "email", "phone", "meta")
+        fields = ("id", "fleet_owner", "address", "phone", "meta")
 
 
 class OperationSerializer(serializers.ModelSerializer):
