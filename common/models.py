@@ -18,6 +18,7 @@ class Country(TimeStampModel):
     """Model for Country."""
 
     name = models.CharField(max_length=255, unique=True)
+    code = models.CharField(max_length=2, unique=True, db_index=True)
     is_active = models.BooleanField(default=True)
 
     def __str__(self):
@@ -35,6 +36,7 @@ class State(TimeStampModel):
         "Country",
         on_delete=models.CASCADE
     )
+    code = models.CharField(max_length=2, unique=True, db_index=True)
     is_active = models.BooleanField(default=True)
 
     def __str__(self):

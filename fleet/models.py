@@ -48,6 +48,9 @@ class Operation(TimeStampModel):
     class Meta:
         verbose_name_plural = "Operations"
 
+    def __str__(self):
+        self.commission_agent.username
+
 
 FUEL_TYPE_CHOICE = (
     ("Deisel", "Deisel"),
@@ -77,6 +80,9 @@ class Vehicle(TimeStampModel):
         on_delete=models.CASCADE
     )
 
+    def __str__(self):
+        return self.registration_number
+
 
 class VehicleType(TimeStampModel):
     """Model for Vehicle."""
@@ -97,6 +103,9 @@ class Feed(TimeStampModel):
 
     class Meta:
         verbose_name_plural = "Feeds"
+
+    def __str__(self):
+        return self.vehicle.registration_number
 
 
 class Lead(TimeStampModel):
