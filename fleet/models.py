@@ -26,13 +26,9 @@ class FleetOwner(TimeStampModel):
 class Operation(TimeStampModel):
     """Operation Model."""
 
-    commission_agent = models.ForeignKey(
-        "agent.CommissionAgent",
-        on_delete=models.CASCADE
-    )
-    fleet_owner = models.ForeignKey(
-        "FleetOwner",
-        on_delete=models.CASCADE
+    operation_user = models.ForeignKey(
+        User, on_delete=models.CASCADE,
+        verbose_name="FO/CA"
     )
     source = models.ForeignKey(
         "common.City",
@@ -87,6 +83,11 @@ class Vehicle(TimeStampModel):
 class VehicleType(TimeStampModel):
     """Model for Vehicle."""
     type = models.CharField(max_length=255)
+    length = models.CharField(max_length=255)
+    weight = models.CharField(max_length=255)
+
+    def __str__(self):
+        return self.type
 
 
 class Feed(TimeStampModel):
@@ -106,6 +107,14 @@ class Feed(TimeStampModel):
 
     def __str__(self):
         return self.vehicle.registration_number
+
+
+class MaterialType(TimeStampModel):
+    name = models.CharField(max_length=255)
+    is_active = models.BooleanField()
+
+    def __str__(self):
+        return self.name
 
 
 class Lead(TimeStampModel):
@@ -130,7 +139,11 @@ class Lead(TimeStampModel):
         "Vehicle",
         on_delete=models.CASCADE
     )
-    material_to_carried = models.CharField(max_length=255)
+    material_to_carried = models.ForeignKey(
+        MaterialType,
+        on_delete=models.CASCADE,
+        verbose_name="Material to be Carried"
+    )
     weight = models.CharField(max_length=20)
 
 
@@ -148,7 +161,10 @@ class Quote(TimeStampModel):
         on_delete=models.CASCADE
     )
     price = models.CharField(max_length=100)
-    etd = models.CharField(max_length=255, verbose_name="Estimated time of Delivery")
+    etd = models.CharField(
+        max_length=255,
+        verbose_name="Estimated time of Delivery"
+    )
 
 
 class Job(TimeStampModel):
