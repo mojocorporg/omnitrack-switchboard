@@ -58,3 +58,17 @@ class City(TimeStampModel):
 
     class Meta:
         verbose_name_plural = "Cities"
+
+
+class Currency(TimeStampModel):
+    """Model for Currency."""
+
+    name = models.CharField(max_length=200)
+    symbol = models.CharField(max_length=10)
+    is_active = models.BooleanField(default=True)
+
+    def __str__(self):
+        return self.name + "(" + self.symbol + ")"
+
+    class Meta:
+        verbose_name_plural = "Currencies"

@@ -1,0 +1,122 @@
+[
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "name": "Consumer packed goods",
+      "is_active": 1
+    },
+    "model": "fleet.MaterialType",
+    "pk": 1
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "name": "Food and agriculture",
+      "is_active": 1
+    },
+    "model": "fleet.MaterialType",
+    "pk": 2
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "name": "Machine/ Auto Parts",
+      "is_active": 1
+    },
+    "model": "fleet.MaterialType",
+    "pk": 3
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "name": "Electronic Goods",
+      "is_active": 1
+    },
+    "model": "fleet.MaterialType",
+    "pk": 4
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "name": "Chemical/ Powder",
+      "is_active": 1
+    },
+    "model": "fleet.MaterialType",
+    "pk": 5
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "name": "Scrap",
+      "is_active": 1
+    },
+    "model": "fleet.MaterialType",
+    "pk": 6
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "name": "Construction Material",
+      "is_active": 1
+    },
+    "model": "fleet.MaterialType",
+    "pk": 7
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "name": "Petroleum/Paint",
+      "is_active": 1
+    },
+    "model": "fleet.MaterialType",
+    "pk": 8
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "name": "Tyre",
+      "is_active": 1
+    },
+    "model": "fleet.MaterialType",
+    "pk": 9
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "name": "Battery",
+      "is_active": 1
+    },
+    "model": "fleet.MaterialType",
+    "pk": 10
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "name": "Cylinders",
+      "is_active": 1
+    },
+    "model": "fleet.MaterialType",
+    "pk": 11
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "name": "Alcoholic Beverages",
+      "is_active": 1
+    },
+    "model": "fleet.MaterialType",
+    "pk": 12
+  }
+]

@@ -5,6 +5,25 @@ from django.contrib.auth.models import User
 
 
 # Create your models here.
+JOB_STATUS_CHOICES = (
+    (1, "Delay"),
+    (2, "Loaded"),
+    (3, "In Transit"),
+)
+RATING_CHOICES = (
+    (1, 1),
+    (2, 2),
+    (3, 3),
+    (4, 4),
+    (5, 5),
+    (6, 6),
+    (7, 7),
+    (8, 8),
+    (9, 9),
+    (10, 10)
+)
+
+
 class FleetOwner(TimeStampModel):
     """Fleet Owner Model"""
 
@@ -54,6 +73,16 @@ FUEL_TYPE_CHOICE = (
 )
 
 
+class VehicleType(TimeStampModel):
+    """Model for Vehicle."""
+    type = models.CharField(max_length=255)
+    length = models.CharField(max_length=255)
+    weight = models.CharField(max_length=255)
+
+    def __str__(self):
+        return self.type + "(" + self.length + ", " + self.weight + ")"
+
+
 class Vehicle(TimeStampModel):
     """Model for Vehicle."""
 
@@ -75,19 +104,13 @@ class Vehicle(TimeStampModel):
         "FleetOwner",
         on_delete=models.CASCADE
     )
+    vehicle_type = models.ForeignKey(
+        VehicleType, on_delete=models.CASCADE,
+        null=True, blank=True
+    )
 
     def __str__(self):
         return self.registration_number
-
-
-class VehicleType(TimeStampModel):
-    """Model for Vehicle."""
-    type = models.CharField(max_length=255)
-    length = models.CharField(max_length=255)
-    weight = models.CharField(max_length=255)
-
-    def __str__(self):
-        return self.type
 
 
 class Feed(TimeStampModel):
@@ -135,8 +158,8 @@ class Lead(TimeStampModel):
         related_name="lead_destination"
     )
     departure_date = models.DateField()
-    vehicle = models.ForeignKey(
-        "Vehicle",
+    vehicle_type = models.ForeignKey(
+        VehicleType,
         on_delete=models.CASCADE
     )
     material_to_carried = models.ForeignKey(
@@ -144,7 +167,7 @@ class Lead(TimeStampModel):
         on_delete=models.CASCADE,
         verbose_name="Material to be Carried"
     )
-    weight = models.CharField(max_length=20)
+    weight = models.FloatField(verbose_name="Weight(kg)")
 
 
 class Quote(TimeStampModel):
@@ -160,10 +183,13 @@ class Quote(TimeStampModel):
         "Vehicle",
         on_delete=models.CASCADE
     )
-    price = models.CharField(max_length=100)
-    etd = models.CharField(
-        max_length=255,
-        verbose_name="Estimated time of Delivery"
+    price = models.FloatField()
+    currency = models.ForeignKey(
+        "common.Currency",
+        on_delete=models.CASCADE
+    )
+    etd = models.PositiveSmallIntegerField(
+        verbose_name="Estimated time of Delivery(Hrs)"
     )
 
 
@@ -173,6 +199,7 @@ class Job(TimeStampModel):
         Quote, on_delete=models.CASCADE
     )
     delivery_date = models.DateField()
+    status = models.PositiveSmallIntegerField(choices=JOB_STATUS_CHOICES)
 
 
 class Rating(TimeStampModel):
@@ -187,5 +214,7 @@ class Rating(TimeStampModel):
     rated_entity = models.PositiveSmallIntegerField(
         choices=RATED_ENTITY_CHOICE
     )
-    rating = models.CharField(max_length=50)
+    rating = models.PositiveSmallIntegerField(
+        choices=RATING_CHOICES
+    )
     review = models.TextField()
