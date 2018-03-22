@@ -1,6 +1,7 @@
 from .viewsets import (
     FleetOwnerViewSet, OperationViewSet, FeedViewSet, VehicleViewSet,
-    VehicleTypeViewSet, LeadViewSet, QuoteViewSet, JobViewSet, RatingViewSet
+    VehicleTypeViewSet, LeadViewSet, QuoteViewSet, JobViewSet, RatingViewSet,
+    MaterialTypeViewSet
 )
 from django.conf.urls import url
 from django.urls import path
@@ -38,6 +39,19 @@ feed_list = FeedViewSet.as_view({
 })
 
 feed_detail = FeedViewSet.as_view({
+    'get': 'retrieve',
+    'put': 'update',
+    'patch': 'partial_update',
+    'delete': 'destroy'
+})
+
+
+material_type_list = MaterialTypeViewSet.as_view({
+    'get': 'list',
+    'post': 'create',
+})
+
+material_type_detail = MaterialTypeViewSet.as_view({
     'get': 'retrieve',
     'put': 'update',
     'patch': 'partial_update',

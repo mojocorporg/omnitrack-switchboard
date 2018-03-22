@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from fleet.models import (
     FleetOwner, Operation, Feed, Vehicle, VehicleType,
-    Lead, Rating, Job, Quote
+    Lead, Rating, Job, Quote, MaterialType
 )
 
 
@@ -15,7 +15,7 @@ class OperationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Operation
         fields = (
-            "id", "commission_agent", "fleet_owner", "source", "destination"
+            "id", "operation_user", "source", "destination"
         )
 
 
@@ -23,6 +23,12 @@ class FeedSerializer(serializers.ModelSerializer):
     class Meta:
         model = Feed
         fields = ("id", "vehicle", "city")
+
+
+class MaterialTypeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = MaterialType
+        fields = ("id", "name")
 
 
 class VehicleSerializer(serializers.ModelSerializer):
@@ -39,7 +45,7 @@ class VehicleTypeSerializer(serializers.ModelSerializer):
     class Meta:
         model = VehicleType
         fields = (
-            "id", "type"
+            "id", "type", "length", "weight"
         )
 
 
@@ -48,7 +54,7 @@ class LeadSerializer(serializers.ModelSerializer):
         model = Lead
         fields = (
             "id", "commission_agent", "source", "destination",
-            "departure_date", "vehicle", "material_to_carried",
+            "departure_date", "vehicle_type", "material_to_carried",
             "weight"
         )
 
@@ -66,7 +72,7 @@ class JobSerializer(serializers.ModelSerializer):
     class Meta:
         model = Job
         fields = (
-            "id", "quote", "delivery_date"
+            "id", "quote", "delivery_date", "status"
         )
 
 

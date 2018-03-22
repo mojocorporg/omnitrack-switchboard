@@ -4,7 +4,8 @@ from fleet.models import *
 from .serializers import (
     FleetOwnerSerializer, OperationSerializer,
     FeedSerializer, VehicleSerializer, VehicleTypeSerializer,
-    LeadSerializer, QuoteSerializer, JobSerializer, RatingSerializer
+    LeadSerializer, QuoteSerializer, JobSerializer, RatingSerializer,
+    MaterialTypeSerializer
 )
 
 
@@ -21,6 +22,11 @@ class OperationViewSet(viewsets.ModelViewSet):
 class FeedViewSet(viewsets.ModelViewSet):
     queryset = Feed.objects.all()
     serializer_class = FeedSerializer
+
+
+class MaterialTypeViewSet(viewsets.ModelViewSet):
+    queryset = MaterialType.objects.all()
+    serializer_class = MaterialTypeSerializer
 
 
 class VehicleViewSet(viewsets.ModelViewSet):
