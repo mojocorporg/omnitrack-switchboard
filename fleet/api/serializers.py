@@ -14,15 +14,15 @@ class FleetOwnerSerializer(serializers.ModelSerializer):
 class OperationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Operation
-        fields = (
-            "id", "operation_user", "source", "destination"
-        )
+        fields = "__all__"
+        depth = 1
 
 
 class FeedSerializer(serializers.ModelSerializer):
     class Meta:
         model = Feed
-        fields = ("id", "vehicle", "city")
+        fields = "__all__"
+        depth = 1
 
 
 class MaterialTypeSerializer(serializers.ModelSerializer):
@@ -34,11 +34,7 @@ class MaterialTypeSerializer(serializers.ModelSerializer):
 class VehicleSerializer(serializers.ModelSerializer):
     class Meta:
         model = Vehicle
-        fields = (
-            "id", "name", "brand", "model", "model_number", "registration_number",
-            "chassis_number", "engine_number", "body_type", "fuel_type", "color",
-            "meta", "fleet_owner",
-        )
+        fields = "__all__"
 
 
 class VehicleTypeSerializer(serializers.ModelSerializer):
@@ -52,33 +48,26 @@ class VehicleTypeSerializer(serializers.ModelSerializer):
 class LeadSerializer(serializers.ModelSerializer):
     class Meta:
         model = Lead
-        fields = (
-            "id", "commission_agent", "source", "destination",
-            "departure_date", "vehicle_type", "material_to_carried",
-            "weight"
-        )
+        fields = "__all__"
+        depth = 1
 
 
 class QuoteSerializer(serializers.ModelSerializer):
     class Meta:
         model = Quote
-        fields = (
-            "id", "lead", "commission_agent", "vehicle",
-            "price", "etd"
-        )
+        fields = "__all__"
+        depth = 1
 
 
 class JobSerializer(serializers.ModelSerializer):
     class Meta:
         model = Job
-        fields = (
-            "id", "quote", "delivery_date", "status"
-        )
+        fields = "__all__"
+        depth = 1
 
 
 class RatingSerializer(serializers.ModelSerializer):
     class Meta:
         model = Rating
-        fields = (
-            "id", "job", "rated_entity", "rating", "review"
-        )
+        fields = "__all__"
+        depth = 1

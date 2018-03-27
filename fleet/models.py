@@ -63,9 +63,6 @@ class Operation(TimeStampModel):
     class Meta:
         verbose_name_plural = "Operations"
 
-    def __str__(self):
-        self.commission_agent.username
-
 
 FUEL_TYPE_CHOICE = (
     ("Deisel", "Deisel"),
