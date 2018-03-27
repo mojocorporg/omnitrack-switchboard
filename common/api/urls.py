@@ -1,20 +1,54 @@
-"""common API URL Configuration
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/2.0/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
+from .viewsets import (
+    CityViewSet, StateViewSet, CountryViewSet
+)
+from django.conf.urls import url
 from django.urls import path
-from django.conf.urls import include, url
+
+
+city_list = CityViewSet.as_view({
+    'get': 'list',
+    'post': 'create',
+})
+
+city_detail = CityViewSet.as_view({
+    'get': 'retrieve',
+    'put': 'update',
+    'patch': 'partial_update',
+    'delete': 'destroy'
+})
+
+
+state_list = StateViewSet.as_view({
+    'get': 'list',
+    'post': 'create',
+})
+
+state_detail = StateViewSet.as_view({
+    'get': 'retrieve',
+    'put': 'update',
+    'patch': 'partial_update',
+    'delete': 'destroy'
+})
+
+
+country_list = CountryViewSet.as_view({
+    'get': 'list',
+    'post': 'create',
+})
+
+country_detail = CountryViewSet.as_view({
+    'get': 'retrieve',
+    'put': 'update',
+    'patch': 'partial_update',
+    'delete': 'destroy'
+})
+
 
 urlpatterns = [
+    url(r'^city/$', city_list),
+    url(r'^city/(?P<pk>[0-9]+)/$$', city_detail),
+    url(r'^state/$', state_list),
+    url(r'^state/(?P<pk>[0-9]+)/$$', state_detail),
+    url(r'^country/$', country_list),
+    url(r'^country/(?P<pk>[0-9]+)/$$', country_detail),
 ]
