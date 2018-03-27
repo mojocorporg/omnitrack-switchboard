@@ -45,7 +45,7 @@ class VehicleTypeSerializer(serializers.ModelSerializer):
     class Meta:
         model = VehicleType
         fields = (
-            "id", "type", "length", "weight"
+            "id", "type", "length", "weight", "meta"
         )
 
 
