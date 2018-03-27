@@ -75,6 +75,10 @@ FUEL_TYPE_CHOICE = (
 
 class VehicleType(TimeStampModel):
     """Model for Vehicle."""
+
+    def meta_default():
+        return {"abc": "xyz"}
+
     type = models.CharField(max_length=255)
     length = models.CharField(max_length=255)
     weight = models.CharField(max_length=255)
