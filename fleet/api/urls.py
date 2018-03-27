@@ -148,6 +148,8 @@ urlpatterns = [
     url(r'^vehicle/(?P<pk>[0-9]+)/$$', vehicle_detail),
     url(r'^vehicletype/$', vehicletype_list),
     url(r'^vehicletype/(?P<pk>[0-9]+)/$$', vehicletype_detail),
+    url(r'^materialtype/$', material_type_list),
+    url(r'^materialtype/(?P<pk>[0-9]+)/$$', material_type_detail),
     url(r'^lead/$', lead_list),
     url(r'^lead/(?P<pk>[0-9]+)/$$', lead_detail),
     url(r'^quote/$', quote_list),
