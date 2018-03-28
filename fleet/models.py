@@ -160,7 +160,7 @@ class Lead(TimeStampModel):
         related_name="lead_destination"
     )
     departure_date = models.DateField()
-    departure_time = models.TimeField(blank=True)
+    departure_time = models.TimeField(blank=True, null=True)
     vehicle_type = models.ForeignKey(
         VehicleType,
         on_delete=models.CASCADE
