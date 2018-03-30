@@ -235,4 +235,4 @@ class Rating(TimeStampModel):
     review = models.TextField(null=True, blank=True)
 
     def __str__(self):
-        return self.job.title + " got " + self.rating
+        return self.rating
