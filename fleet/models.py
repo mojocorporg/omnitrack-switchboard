@@ -233,6 +233,3 @@ class Rating(TimeStampModel):
         choices=RATING_CHOICES, db_index=True
     )
     review = models.TextField(null=True, blank=True)
-
-    def __str__(self):
-        return self.rating
