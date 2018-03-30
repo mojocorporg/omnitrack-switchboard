@@ -5,7 +5,8 @@ from .serializers import (
     FleetOwnerSerializer, OperationSerializer,
     FeedSerializer, VehicleSerializer, VehicleTypeSerializer,
     LeadSerializer, QuoteSerializer, JobSerializer, RatingSerializer,
-    MaterialTypeSerializer
+    MaterialTypeSerializer, LeadListSerializer, OperationListSerializer,
+    FeedListSerializer, QuoteListSerializer, JobListSerializer
 )
 
 
@@ -16,12 +17,20 @@ class FleetOwnerViewSet(viewsets.ModelViewSet):
 
 class OperationViewSet(viewsets.ModelViewSet):
     queryset = Operation.objects.all()
-    serializer_class = OperationSerializer
+
+    def get_serializer_class(self):
+        if self.action == 'list':
+            return OperationListSerializer
+        return OperationSerializer
 
 
 class FeedViewSet(viewsets.ModelViewSet):
     queryset = Feed.objects.all()
-    serializer_class = FeedSerializer
+
+    def get_serializer_class(self):
+        if self.action == 'list':
+            return FeedListSerializer
+        return FeedSerializer
 
 
 class MaterialTypeViewSet(viewsets.ModelViewSet):
@@ -41,17 +50,29 @@ class VehicleTypeViewSet(viewsets.ModelViewSet):
 
 class LeadViewSet(viewsets.ModelViewSet):
     queryset = Lead.objects.all()
-    serializer_class = LeadSerializer
+
+    def get_serializer_class(self):
+        if self.action == 'list':
+            return LeadListSerializer
+        return LeadSerializer
 
 
 class QuoteViewSet(viewsets.ModelViewSet):
     queryset = Quote.objects.all()
-    serializer_class = QuoteSerializer
+
+    def get_serializer_class(self):
+        if self.action == 'list':
+            return QuoteListSerializer
+        return QuoteSerializer
 
 
 class JobViewSet(viewsets.ModelViewSet):
     queryset = Job.objects.all()
-    serializer_class = JobSerializer
+
+    def get_serializer_class(self):
+        if self.action == 'list':
+            return JobListSerializer
+        return JobSerializer
 
 
 class RatingViewSet(viewsets.ModelViewSet):

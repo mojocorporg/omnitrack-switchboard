@@ -11,9 +11,22 @@ class FleetOwnerSerializer(serializers.ModelSerializer):
         fields = ("id", "fleet_owner", "address", "phone", "meta")
 
 
+class OperationListSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Operation
+        fields = "__all__"
+        depth = 1
+
+
 class OperationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Operation
+        fields = ("id", "operation_user", "source", "destination")
+
+
+class FeedListSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Feed
         fields = "__all__"
         depth = 1
 
@@ -21,8 +34,7 @@ class OperationSerializer(serializers.ModelSerializer):
 class FeedSerializer(serializers.ModelSerializer):
     class Meta:
         model = Feed
-        fields = "__all__"
-        depth = 1
+        fields = ("id", "vehicle", "city")
 
 
 class MaterialTypeSerializer(serializers.ModelSerializer):
@@ -45,9 +57,25 @@ class VehicleTypeSerializer(serializers.ModelSerializer):
         )
 
 
+class LeadListSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Lead
+        fields = "__all__"
+        depth = 1
+
+
 class LeadSerializer(serializers.ModelSerializer):
     class Meta:
         model = Lead
+        fields = (
+            "id" ,"commission_agent", "departure_time", "departure_date",
+            "source", "destination", "vehicle_type", "material_to_carried", "weight"
+        )
+
+
+class QuoteListSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Quote
         fields = "__all__"
         depth = 1
 
@@ -55,6 +83,13 @@ class LeadSerializer(serializers.ModelSerializer):
 class QuoteSerializer(serializers.ModelSerializer):
     class Meta:
         model = Quote
+        fields = ("id", "lead", "commission_agent", "vehicle", "price",
+        "currency", "etd")
+
+
+class JobListSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Job
         fields = "__all__"
         depth = 1
 
@@ -62,12 +97,10 @@ class QuoteSerializer(serializers.ModelSerializer):
 class JobSerializer(serializers.ModelSerializer):
     class Meta:
         model = Job
-        fields = "__all__"
-        depth = 1
+        fields = ("id", "quote", "delivery_date", "status")
 
 
 class RatingSerializer(serializers.ModelSerializer):
     class Meta:
         model = Rating
         fields = "__all__"
-        depth = 1
