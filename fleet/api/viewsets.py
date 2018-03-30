@@ -54,6 +54,8 @@ class LeadViewSet(viewsets.ModelViewSet):
     def get_serializer_class(self):
         if self.action == 'list':
             return LeadListSerializer
+        elif self.action == 'retrieve':
+            return LeadListSerializer
         return LeadSerializer
 
 
