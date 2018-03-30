@@ -26,7 +26,8 @@ class FleetOwner(TimeStampModel):
         return {"abc": "xyz"}
 
     fleet_owner = models.OneToOneField(User, on_delete=models.CASCADE, db_index=True)
-    address = models.TextField()
+    company_name = models.CharField(max_length=250, null=True, blank=True)
+    company_address = models.CharField(max_length=250, null=True, blank=True)
     phone = models.CharField(max_length=15)
     meta = JSONField(default=meta_default)
 
