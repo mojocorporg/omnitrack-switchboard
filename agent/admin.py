@@ -3,7 +3,7 @@ from .models import CommissionAgent
 
 # Register your models here.
 class CommissionAgentAdmin(admin.ModelAdmin):
-    list_display = ["agent", "company_data", "phone", "hub"]
+    list_display = ["agent", "company_name", "phone", "hub"]
     search_fields = ["agent__username"]
     list_filter = ["agent__is_active"]
 
