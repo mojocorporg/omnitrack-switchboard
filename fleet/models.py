@@ -5,11 +5,6 @@ from django.contrib.auth.models import User
 
 
 # Create your models here.
-JOB_STATUS_CHOICES = (
-    (1, "Delay"),
-    (2, "Loaded"),
-    (3, "In Transit"),
-)
 RATING_CHOICES = (
     (1, 1),
     (2, 2),
@@ -30,7 +25,7 @@ class FleetOwner(TimeStampModel):
     def meta_default():
         return {"abc": "xyz"}
 
-    fleet_owner = models.OneToOneField(User, on_delete=models.CASCADE)
+    fleet_owner = models.OneToOneField(User, on_delete=models.CASCADE, db_index=True)
     address = models.TextField()
     phone = models.CharField(max_length=15)
     meta = JSONField(default=meta_default)
@@ -47,17 +42,17 @@ class Operation(TimeStampModel):
 
     operation_user = models.ForeignKey(
         User, on_delete=models.CASCADE,
-        verbose_name="FO/CA"
+        verbose_name="FO/CA", db_index=True
     )
     source = models.ForeignKey(
         "common.City",
         on_delete=models.CASCADE,
-        related_name="source"
+        related_name="source", db_index=True
     )
     destination = models.ForeignKey(
         "common.City",
         on_delete=models.CASCADE,
-        related_name="destination"
+        related_name="destination", db_index=True
     )
 
     class Meta:
@@ -92,15 +87,15 @@ class Vehicle(TimeStampModel):
         return {"abc": "xyz"}
 
     name = models.CharField(max_length=255)
-    brand = models.CharField(max_length=255)
-    model = models.CharField(max_length=255)
-    model_number = models.CharField(max_length=255)
-    registration_number = models.CharField(max_length=255)
-    chassis_number = models.CharField(max_length=255)
-    engine_number = models.CharField(max_length=255)
-    body_type = models.CharField(max_length=255)
+    brand = models.CharField(max_length=255, null=True, blank=True)
+    model = models.CharField(max_length=255, null=True, blank=True)
+    model_number = models.CharField(max_length=255, null=True, blank=True)
+    registration_number = models.CharField(max_length=255, db_index=True, unique=True)
+    chassis_number = models.CharField(max_length=255, null=True, blank=True)
+    engine_number = models.CharField(max_length=255, null=True, blank=True)
+    body_type = models.CharField(max_length=255, null=True, blank=True)
     fuel_type = models.CharField(max_length=100, choices=FUEL_TYPE_CHOICE)
-    color = models.CharField(max_length=255)
+    color = models.CharField(max_length=255, null=True, blank=True)
     meta = JSONField(default=meta_default)
     fleet_owner = models.ForeignKey(
         "FleetOwner",
@@ -120,11 +115,11 @@ class Feed(TimeStampModel):
 
     vehicle = models.ForeignKey(
         "Vehicle",
-        on_delete=models.CASCADE
+        on_delete=models.CASCADE, db_index=True
     )
     city = models.ForeignKey(
         "common.City",
-        on_delete=models.CASCADE
+        on_delete=models.CASCADE, db_index=True
     )
 
     class Meta:
@@ -144,65 +139,87 @@ class MaterialType(TimeStampModel):
 
 class Lead(TimeStampModel):
     """Leads Model."""
-
+    title = models.CharField(max_length=200, null=True, blank=True)
     commission_agent = models.ForeignKey(
         "agent.CommissionAgent",
-        on_delete=models.CASCADE
+        on_delete=models.CASCADE, db_index=True
     )
     source = models.ForeignKey(
         "common.City",
         on_delete=models.CASCADE,
-        related_name="lead_source"
+        related_name="lead_source", db_index=True
     )
     destination = models.ForeignKey(
         "common.City",
         on_delete=models.CASCADE,
-        related_name="lead_destination"
+        related_name="lead_destination", db_index=True
     )
     departure_date = models.DateField()
     departure_time = models.TimeField(blank=True, null=True)
     vehicle_type = models.ForeignKey(
         VehicleType,
-        on_delete=models.CASCADE
+        on_delete=models.CASCADE, db_index=True
     )
     material_to_carried = models.ForeignKey(
         MaterialType,
         on_delete=models.CASCADE,
-        verbose_name="Material to be Carried"
+        verbose_name="Material to be Carried", db_index=True
     )
     weight = models.FloatField(verbose_name="Weight(kg)")
+
+    def __str__(self):
+        self.title
 
 
 class Quote(TimeStampModel):
     """Quote Models"""
+    title = models.CharField(max_length=200, null=True, blank=True)
     lead = models.ForeignKey(
         Lead, on_delete=models.CASCADE
     )
     commission_agent = models.ForeignKey(
         "agent.CommissionAgent",
-        on_delete=models.CASCADE
+        on_delete=models.CASCADE, db_index=True
     )
     vehicle = models.ForeignKey(
         "Vehicle",
-        on_delete=models.CASCADE
+        on_delete=models.CASCADE,
+        null=True, blank=True, db_index=True
     )
     price = models.FloatField()
     currency = models.ForeignKey(
         "common.Currency",
-        on_delete=models.CASCADE
+        on_delete=models.CASCADE, db_index=True
     )
     etd = models.PositiveSmallIntegerField(
-        verbose_name="Estimated time of Delivery(Hrs)"
+        verbose_name="Estimated time of Delivery(Hrs)", db_index=True
     )
+
+    def __str__(self):
+        self.title
+
+
+class JobStatus(TimeStampModel):
+    """Job Models."""
+    name = models.CharField(max_length=50, unique=True)
+
+    def __str__(self):
+        return self.name
 
 
 class Job(TimeStampModel):
     """Job Models."""
+    title = models.CharField(max_length=200, null=True, blank=True)
     quote = models.ForeignKey(
-        Quote, on_delete=models.CASCADE
+        Quote, on_delete=models.CASCADE, db_index=True
     )
     delivery_date = models.DateField()
-    status = models.PositiveSmallIntegerField(choices=JOB_STATUS_CHOICES)
+    status = models.ForeignKey(
+        JobStatus, on_delete=models.CASCADE, db_index=True
+    )
+
+    def __str__(self):
+        self.title
 
 
 class Rating(TimeStampModel):
@@ -212,12 +229,15 @@ class Rating(TimeStampModel):
         (2, "Fleet Owner")
     )
     job = models.ForeignKey(
-        Job, on_delete=models.CASCADE
+        Job, on_delete=models.CASCADE, db_index=True
     )
     rated_entity = models.PositiveSmallIntegerField(
-        choices=RATED_ENTITY_CHOICE
+        choices=RATED_ENTITY_CHOICE, db_index=True
     )
     rating = models.PositiveSmallIntegerField(
-        choices=RATING_CHOICES
+        choices=RATING_CHOICES, db_index=True
     )
-    review = models.TextField()
+    review = models.TextField(null=True, blank=True)
+
+    def __str__(self):
+        return self.job.title + " got " + self.rating
