@@ -51,6 +51,17 @@ class VehicleTypeViewSet(viewsets.ModelViewSet):
 class LeadViewSet(viewsets.ModelViewSet):
     queryset = Lead.objects.all()
 
+    def get_queryset(self):
+        """
+        Optionally restricts the returned purchases to a given user,
+        by filtering against a `username` query parameter in the URL.
+        """
+        queryset = self.queryset
+        commissionagent_id = self.request.query_params.get('commissionagent_id', None)
+        if commissionagent_id is not None:
+            return queryset.filter(commission_agent__id=commissionagent_id)
+        return queryset
+
     def get_serializer_class(self):
         if self.action == 'list':
             return LeadListSerializer
@@ -84,6 +95,20 @@ class QuoteViewSet(viewsets.ModelViewSet):
 
 class JobViewSet(viewsets.ModelViewSet):
     queryset = Job.objects.all()
+
+    def get_queryset(self):
+        """
+        Optionally restricts the returned purchases to a given user,
+        by filtering against a `username` query parameter in the URL.
+        """
+        queryset = self.queryset
+        lead_id = self.request.query_params.get('lead_id', None)
+        commissionagent_id = self.request.query_params.get('commissionagent_id', None)
+        if lead_id is not None:
+            return queryset.filter(quote__lead__id=lead_id)
+        if commissionagent_id is not None:
+            return queryset.filter(quote__commission_agent__id=commissionagent_id)
+        return queryset
 
     def get_serializer_class(self):
         if self.action == 'list':
