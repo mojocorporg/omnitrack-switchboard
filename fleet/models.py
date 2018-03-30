@@ -168,7 +168,7 @@ class Lead(TimeStampModel):
     weight = models.FloatField(verbose_name="Weight(kg)")
 
     def __str__(self):
-        self.title
+        return self.title
 
 
 class Quote(TimeStampModel):
@@ -196,7 +196,7 @@ class Quote(TimeStampModel):
     )
 
     def __str__(self):
-        self.title
+        return self.title
 
 
 class JobStatus(TimeStampModel):
@@ -219,7 +219,7 @@ class Job(TimeStampModel):
     )
 
     def __str__(self):
-        self.title
+        return self.title
 
 
 class Rating(TimeStampModel):
