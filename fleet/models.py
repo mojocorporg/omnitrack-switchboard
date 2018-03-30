@@ -168,7 +168,8 @@ class Lead(TimeStampModel):
     weight = models.FloatField(verbose_name="Weight(kg)")
 
     def __str__(self):
-        return self.title
+        return self.commission_agent.agent.username + " has lead from " +\
+            self.source.name + " to " + self.destination.name
 
 
 class Quote(TimeStampModel):
@@ -195,9 +196,6 @@ class Quote(TimeStampModel):
         verbose_name="Estimated time of Delivery(Hrs)", db_index=True
     )
 
-    def __str__(self):
-        return self.title
-
 
 class JobStatus(TimeStampModel):
     """Job Models."""
@@ -217,9 +215,6 @@ class Job(TimeStampModel):
     status = models.ForeignKey(
         JobStatus, on_delete=models.CASCADE, db_index=True
     )
-
-    def __str__(self):
-        return self.title
 
 
 class Rating(TimeStampModel):
