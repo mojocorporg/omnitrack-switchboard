@@ -91,7 +91,7 @@ class JobListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Job
         fields = "__all__"
-        depth = 1
+        depth = 2
 
 
 class JobSerializer(serializers.ModelSerializer):
