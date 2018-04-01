@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'fleet.apps.FleetConfig',
     'agent.apps.AgentConfig',
     'rest_framework',
+    'django_filters',
     'rest_framework.authtoken',
     'rest_framework_swagger',
 ]
