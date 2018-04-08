@@ -46,6 +46,7 @@ class VehicleViewSet(viewsets.ModelViewSet):
 class VehicleTypeViewSet(viewsets.ModelViewSet):
     queryset = VehicleType.objects.all()
     serializer_class = VehicleTypeSerializer
+    filter_fields = ("type", "length", "weight")
 
 
 class LeadViewSet(viewsets.ModelViewSet):
