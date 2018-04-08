@@ -1,0 +1,783 @@
+[
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Open",
+      "length": "6 Tyre",
+      "weight": "6 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 1
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Open",
+      "length": "6 Tyre",
+      "weight": "7 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 2
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Open",
+      "length": "6 Tyre",
+      "weight": "8 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 3
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Open",
+      "length": "6 Tyre",
+      "weight": "9 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 4
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Open",
+      "length": "6 Tyre",
+      "weight": "10 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 5
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Open",
+      "length": "10 Tyre",
+      "weight": "14 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 6
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Open",
+      "length": "10 Tyre",
+      "weight": "15 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 7
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Open",
+      "length": "10 Tyre",
+      "weight": "16 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 8
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Open",
+      "length": "12 Tyre",
+      "weight": "20 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 9
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Open",
+      "length": "12 Tyre",
+      "weight": "21 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 10
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Open",
+      "length": "12 Tyre",
+      "weight": "22 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 11
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Open",
+      "length": "14 Tyre",
+      "weight": "24 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 12
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Open",
+      "length": "14 Tyre",
+      "weight": "25 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 13
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Open",
+      "length": "14 Tyre",
+      "weight": "26 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 14
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Open",
+      "length": "18 Tyre",
+      "weight": "26 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 15
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Open",
+      "length": "18 Tyre",
+      "weight": "27 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 16
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Open",
+      "length": "18 Tyre",
+      "weight": "28 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 17
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Open",
+      "length": "22 Tyre",
+      "weight": "33 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 18
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Open",
+      "length": "22 Tyre",
+      "weight": "34 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 19
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Open",
+      "length": "22 Tyre",
+      "weight": "35 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 20
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Open",
+      "length": "LCV",
+      "weight": "4 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 21
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Open",
+      "length": "LCV",
+      "weight": "4.5 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 22
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Open",
+      "length": "LCV",
+      "weight": "5 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 23
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Open",
+      "length": "LCV",
+      "weight": "5.5 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 24
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Open",
+      "length": "LCV",
+      "weight": "6 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 25
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Open",
+      "length": "Tempo 407",
+      "weight": "1 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 26
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Open",
+      "length": "Tempo 407",
+      "weight": "1.5 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 27
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Open",
+      "length": "Tempo 407",
+      "weight": "2 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 28
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Open",
+      "length": "Tempo 407",
+      "weight": "2.5 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 29
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Open",
+      "length": "Tempo 407",
+      "weight": "3 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 30
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Container",
+      "length": "LCV",
+      "weight": "4 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 31
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Container",
+      "length": "LCV",
+      "weight": "4.5 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 32
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Container",
+      "length": "LCV",
+      "weight": "5 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 33
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Container",
+      "length": "LCV",
+      "weight": "5.5 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 34
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Container",
+      "length": "LCV",
+      "weight": "6 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 35
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Container",
+      "length": "19-22 ft Single Axel",
+      "weight": "6 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 36
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Container",
+      "length": "19-22 ft Single Axel",
+      "weight": "6.5 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 37
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Container",
+      "length": "19-22 ft Single Axel",
+      "weight": "7 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 38
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Container",
+      "length": "24 ft Single Axel",
+      "weight": "6 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 39
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Container",
+      "length": "24 ft Single Axel",
+      "weight": "6.5 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 40
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Container",
+      "length": "24 ft Single Axel",
+      "weight": "7 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 41
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Container",
+      "length": "24 ft Multi Axel",
+      "weight": "14 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 42
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Container",
+      "length": "24 ft Multi Axel",
+      "weight": "14.5 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 43
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Container",
+      "length": "24 ft Multi Axel",
+      "weight": "15 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 44
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Container",
+      "length": "32 ft Single Axel",
+      "weight": "6 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 45
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Container",
+      "length": "32 ft Single Axel",
+      "weight": "6.5 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 46
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Container",
+      "length": "32 ft Single Axel",
+      "weight": "7 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 47
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Container",
+      "length": "32 ft Single Axel HC",
+      "weight": "6 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 48
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Container",
+      "length": "32 ft Single Axel HC",
+      "weight": "6.5 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 49
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Container",
+      "length": "32 ft Single Axel HC",
+      "weight": "7 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 50
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Container",
+      "length": "32 ft Multi Axel",
+      "weight": "14 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 51
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Container",
+      "length": "32 ft Multi Axel",
+      "weight": "14.5 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 52
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Container",
+      "length": "32 ft Multi Axel",
+      "weight": "15 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 53
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Container",
+      "length": "32 ft Multi Axel HC",
+      "weight": "14 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 54
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Container",
+      "length": "32 ft Multi Axel HC",
+      "weight": "14.5 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 55
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Container",
+      "length": "32 ft Multi Axel HC",
+      "weight": "15 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 56
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Container",
+      "length": "32 ft Multi Axel",
+      "weight": "20 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 57
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Container",
+      "length": "32 ft Multi Axel",
+      "weight": "20.5 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 58
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Container",
+      "length": "32 ft Multi Axel",
+      "weight": "21 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 59
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Container",
+      "length": "32 ft Multi Axel HC",
+      "weight": "20 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 60
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Container",
+      "length": "32 ft Multi Axel HC",
+      "weight": "20.5 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 61
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Container",
+      "length": "32 ft Multi Axel HC",
+      "weight": "21 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 62
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Trailer",
+      "length": "High bed",
+      "weight": "23 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 63
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Trailer",
+      "length": "High bed",
+      "weight": "28 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 64
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Trailer",
+      "length": "High bed",
+      "weight": "35 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 65
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Trailer",
+      "length": "Low bed",
+      "weight": "23 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 66
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Trailer",
+      "length": "Low bed",
+      "weight": "28 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 67
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Trailer",
+      "length": "Low bed",
+      "weight": "35 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 68
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Trailer",
+      "length": "Semi bed",
+      "weight": "23 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 69
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Trailer",
+      "length": "Semi bed",
+      "weight": "28 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 70
+  },
+  {
+    "fields": {
+      "created_at": "2018-03-11 00:00:00",
+      "last_updated_at": "2018-03-11 00:00:00",
+      "type": "Trailer",
+      "length": "Semi bed",
+      "weight": "35 Ton"
+    },
+    "model": "fleet.VehicleType",
+    "pk": 71
+  }
+]
