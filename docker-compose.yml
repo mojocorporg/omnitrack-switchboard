@@ -8,3 +8,11 @@ services:
       - .:/code
     ports:
       - "8000:8000"
+    links:
+      - postgres:postgres
+  postgres:
+    image: postgres
+    environment:
+      - POSTGRES_PASSWORD=switchboard012
+      - POSTGRES_USER=switchboard
+      - POSTGRES_DB=switchboard
