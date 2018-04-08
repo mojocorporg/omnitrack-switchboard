@@ -72,9 +72,9 @@ class VehicleType(TimeStampModel):
     def meta_default():
         return {"abc": "xyz"}
 
-    type = models.CharField(max_length=255)
-    length = models.CharField(max_length=255)
-    weight = models.CharField(max_length=255)
+    type = models.CharField(max_length=255, db_index=True)
+    length = models.CharField(max_length=255, db_index=True)
+    weight = models.CharField(max_length=255, db_index=True)
     meta = JSONField(default=meta_default)
 
     def __str__(self):
