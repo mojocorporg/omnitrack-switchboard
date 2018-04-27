@@ -52,6 +52,7 @@ class VehicleTypeViewSet(viewsets.ModelViewSet):
 class LeadViewSet(viewsets.ModelViewSet):
     queryset = Lead.objects.all()
     filter_fields = ("commission_agent",)
+    ordering_fields = ('id',)
 
     def get_serializer_class(self):
         if self.action == 'list':
