@@ -8,6 +8,8 @@ from .serializers import (
     MaterialTypeSerializer, LeadListSerializer, OperationListSerializer,
     FeedListSerializer, QuoteListSerializer, JobListSerializer
 )
+from rest_framework import filters
+from django_filters.rest_framework import DjangoFilterBackend
 
 
 class FleetOwnerViewSet(viewsets.ModelViewSet):
@@ -52,6 +54,7 @@ class VehicleTypeViewSet(viewsets.ModelViewSet):
 class LeadViewSet(viewsets.ModelViewSet):
     queryset = Lead.objects.all()
     filter_fields = ("commission_agent",)
+    filter_backends = (filters.OrderingFilter, DjangoFilterBackend)
     ordering_fields = ('id',)
 
     def get_serializer_class(self):
