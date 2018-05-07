@@ -53,7 +53,7 @@ class VehicleTypeViewSet(viewsets.ModelViewSet):
 
 class LeadViewSet(viewsets.ModelViewSet):
     queryset = Lead.objects.all()
-    filter_fields = ("commission_agent",)
+    filter_fields = ("__all__")
     filter_backends = (filters.OrderingFilter, DjangoFilterBackend)
     ordering_fields = ('id',)
 
