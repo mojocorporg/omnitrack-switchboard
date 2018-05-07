@@ -194,7 +194,8 @@ class Quote(TimeStampModel):
         on_delete=models.CASCADE, db_index=True
     )
     etd = models.PositiveSmallIntegerField(
-        verbose_name="Estimated time of Delivery(Hrs)", db_index=True
+        verbose_name="Estimated time of Delivery(Hrs)", db_index=True,
+        null=True, blank=True
     )
 
 
