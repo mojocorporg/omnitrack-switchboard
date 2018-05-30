@@ -3,6 +3,8 @@ from django.shortcuts import get_object_or_404
 from rest_framework import viewsets
 from rest_framework.response import Response
 from django.utils import timezone
+from datetime import timedelta
+
 
 class UserIncreasedViewSet(viewsets.ViewSet):
     """
@@ -10,7 +12,7 @@ class UserIncreasedViewSet(viewsets.ViewSet):
     """
     def retrieve(self, request):
         total_users = User.objects.all().count()
-        users_increased = User.objects.all().filter(date_joined__gte=timezone.now()).count()
+        users_increased = User.objects.all().filter(date_joined__gte=(timezone.now() - timedelta(days=7))).count()
         return Response(
             {
                 "total": total_users,
