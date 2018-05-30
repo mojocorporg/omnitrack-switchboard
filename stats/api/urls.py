@@ -29,6 +29,6 @@ urlpatterns = [
     url(r'^user/$', userincreased),
     url(r'^tonnage/$', tonnageincreased),
     url(r'^lead/$', leadincreased),
-    url(r'^destination/list$', topdestination),
-    url(r'^source/list$', topsource),
+    url(r'^destination/list/$', topdestination),
+    url(r'^source/list/$', topsource),
 ]
