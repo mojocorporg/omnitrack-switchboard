@@ -31,6 +31,7 @@ urlpatterns = [
     path('fleet/', include('fleet.urls')),
     path('common/', include('common.urls')),
     path('agent/', include('agent.urls')),
+    path('stats/', include('stats.urls')),
 ]
 
 # Auth Token URL's
