@@ -74,11 +74,11 @@ class VehicleType(TimeStampModel):
 
     type = models.CharField(max_length=255, db_index=True)
     length = models.CharField(max_length=255, db_index=True)
-    weight = models.CharField(max_length=255, db_index=True)
+    weight = models.FloatField(max_length=255, db_index=True, verbose_name="Weight(Ton)")
     meta = JSONField(default=meta_default)
 
     def __str__(self):
-        return self.type + "(" + self.length + ", " + self.weight + ")"
+        return self.type + "(" + self.length + ", " + str(self.weight) + " Ton)"
 
 
 class Vehicle(TimeStampModel):

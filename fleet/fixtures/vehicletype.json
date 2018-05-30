@@ -5,7 +5,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Open",
       "length": "6 Tyre",
-      "weight": "6 Ton"
+      "weight": "6"
     },
     "model": "fleet.VehicleType",
     "pk": 1
@@ -16,7 +16,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Open",
       "length": "6 Tyre",
-      "weight": "7 Ton"
+      "weight": "7"
     },
     "model": "fleet.VehicleType",
     "pk": 2
@@ -27,7 +27,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Open",
       "length": "6 Tyre",
-      "weight": "8 Ton"
+      "weight": "8"
     },
     "model": "fleet.VehicleType",
     "pk": 3
@@ -38,7 +38,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Open",
       "length": "6 Tyre",
-      "weight": "9 Ton"
+      "weight": "9"
     },
     "model": "fleet.VehicleType",
     "pk": 4
@@ -49,7 +49,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Open",
       "length": "6 Tyre",
-      "weight": "10 Ton"
+      "weight": "10"
     },
     "model": "fleet.VehicleType",
     "pk": 5
@@ -60,7 +60,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Open",
       "length": "10 Tyre",
-      "weight": "14 Ton"
+      "weight": "14"
     },
     "model": "fleet.VehicleType",
     "pk": 6
@@ -71,7 +71,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Open",
       "length": "10 Tyre",
-      "weight": "15 Ton"
+      "weight": "15"
     },
     "model": "fleet.VehicleType",
     "pk": 7
@@ -82,7 +82,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Open",
       "length": "10 Tyre",
-      "weight": "16 Ton"
+      "weight": "16"
     },
     "model": "fleet.VehicleType",
     "pk": 8
@@ -93,7 +93,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Open",
       "length": "12 Tyre",
-      "weight": "20 Ton"
+      "weight": "20"
     },
     "model": "fleet.VehicleType",
     "pk": 9
@@ -104,7 +104,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Open",
       "length": "12 Tyre",
-      "weight": "21 Ton"
+      "weight": "21"
     },
     "model": "fleet.VehicleType",
     "pk": 10
@@ -115,7 +115,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Open",
       "length": "12 Tyre",
-      "weight": "22 Ton"
+      "weight": "22"
     },
     "model": "fleet.VehicleType",
     "pk": 11
@@ -126,7 +126,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Open",
       "length": "14 Tyre",
-      "weight": "24 Ton"
+      "weight": "24"
     },
     "model": "fleet.VehicleType",
     "pk": 12
@@ -137,7 +137,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Open",
       "length": "14 Tyre",
-      "weight": "25 Ton"
+      "weight": "25"
     },
     "model": "fleet.VehicleType",
     "pk": 13
@@ -148,7 +148,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Open",
       "length": "14 Tyre",
-      "weight": "26 Ton"
+      "weight": "26"
     },
     "model": "fleet.VehicleType",
     "pk": 14
@@ -159,7 +159,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Open",
       "length": "18 Tyre",
-      "weight": "26 Ton"
+      "weight": "26"
     },
     "model": "fleet.VehicleType",
     "pk": 15
@@ -170,7 +170,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Open",
       "length": "18 Tyre",
-      "weight": "27 Ton"
+      "weight": "27"
     },
     "model": "fleet.VehicleType",
     "pk": 16
@@ -181,7 +181,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Open",
       "length": "18 Tyre",
-      "weight": "28 Ton"
+      "weight": "28"
     },
     "model": "fleet.VehicleType",
     "pk": 17
@@ -192,7 +192,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Open",
       "length": "22 Tyre",
-      "weight": "33 Ton"
+      "weight": "33"
     },
     "model": "fleet.VehicleType",
     "pk": 18
@@ -203,7 +203,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Open",
       "length": "22 Tyre",
-      "weight": "34 Ton"
+      "weight": "34"
     },
     "model": "fleet.VehicleType",
     "pk": 19
@@ -214,7 +214,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Open",
       "length": "22 Tyre",
-      "weight": "35 Ton"
+      "weight": "35"
     },
     "model": "fleet.VehicleType",
     "pk": 20
@@ -225,7 +225,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Open",
       "length": "LCV",
-      "weight": "4 Ton"
+      "weight": "4"
     },
     "model": "fleet.VehicleType",
     "pk": 21
@@ -236,7 +236,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Open",
       "length": "LCV",
-      "weight": "4.5 Ton"
+      "weight": "4.5"
     },
     "model": "fleet.VehicleType",
     "pk": 22
@@ -247,7 +247,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Open",
       "length": "LCV",
-      "weight": "5 Ton"
+      "weight": "5"
     },
     "model": "fleet.VehicleType",
     "pk": 23
@@ -258,7 +258,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Open",
       "length": "LCV",
-      "weight": "5.5 Ton"
+      "weight": "5.5"
     },
     "model": "fleet.VehicleType",
     "pk": 24
@@ -269,7 +269,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Open",
       "length": "LCV",
-      "weight": "6 Ton"
+      "weight": "6"
     },
     "model": "fleet.VehicleType",
     "pk": 25
@@ -280,7 +280,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Open",
       "length": "Tempo 407",
-      "weight": "1 Ton"
+      "weight": "1"
     },
     "model": "fleet.VehicleType",
     "pk": 26
@@ -291,7 +291,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Open",
       "length": "Tempo 407",
-      "weight": "1.5 Ton"
+      "weight": "1.5"
     },
     "model": "fleet.VehicleType",
     "pk": 27
@@ -302,7 +302,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Open",
       "length": "Tempo 407",
-      "weight": "2 Ton"
+      "weight": "2"
     },
     "model": "fleet.VehicleType",
     "pk": 28
@@ -313,7 +313,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Open",
       "length": "Tempo 407",
-      "weight": "2.5 Ton"
+      "weight": "2.5"
     },
     "model": "fleet.VehicleType",
     "pk": 29
@@ -324,7 +324,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Open",
       "length": "Tempo 407",
-      "weight": "3 Ton"
+      "weight": "3"
     },
     "model": "fleet.VehicleType",
     "pk": 30
@@ -335,7 +335,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Container",
       "length": "LCV",
-      "weight": "4 Ton"
+      "weight": "4"
     },
     "model": "fleet.VehicleType",
     "pk": 31
@@ -346,7 +346,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Container",
       "length": "LCV",
-      "weight": "4.5 Ton"
+      "weight": "4.5"
     },
     "model": "fleet.VehicleType",
     "pk": 32
@@ -357,7 +357,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Container",
       "length": "LCV",
-      "weight": "5 Ton"
+      "weight": "5"
     },
     "model": "fleet.VehicleType",
     "pk": 33
@@ -368,7 +368,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Container",
       "length": "LCV",
-      "weight": "5.5 Ton"
+      "weight": "5.5"
     },
     "model": "fleet.VehicleType",
     "pk": 34
@@ -379,7 +379,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Container",
       "length": "LCV",
-      "weight": "6 Ton"
+      "weight": "6"
     },
     "model": "fleet.VehicleType",
     "pk": 35
@@ -390,7 +390,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Container",
       "length": "19-22 ft Single Axel",
-      "weight": "6 Ton"
+      "weight": "6"
     },
     "model": "fleet.VehicleType",
     "pk": 36
@@ -401,7 +401,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Container",
       "length": "19-22 ft Single Axel",
-      "weight": "6.5 Ton"
+      "weight": "6.5"
     },
     "model": "fleet.VehicleType",
     "pk": 37
@@ -412,7 +412,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Container",
       "length": "19-22 ft Single Axel",
-      "weight": "7 Ton"
+      "weight": "7"
     },
     "model": "fleet.VehicleType",
     "pk": 38
@@ -423,7 +423,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Container",
       "length": "24 ft Single Axel",
-      "weight": "6 Ton"
+      "weight": "6"
     },
     "model": "fleet.VehicleType",
     "pk": 39
@@ -434,7 +434,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Container",
       "length": "24 ft Single Axel",
-      "weight": "6.5 Ton"
+      "weight": "6.5"
     },
     "model": "fleet.VehicleType",
     "pk": 40
@@ -445,7 +445,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Container",
       "length": "24 ft Single Axel",
-      "weight": "7 Ton"
+      "weight": "7"
     },
     "model": "fleet.VehicleType",
     "pk": 41
@@ -456,7 +456,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Container",
       "length": "24 ft Multi Axel",
-      "weight": "14 Ton"
+      "weight": "14"
     },
     "model": "fleet.VehicleType",
     "pk": 42
@@ -467,7 +467,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Container",
       "length": "24 ft Multi Axel",
-      "weight": "14.5 Ton"
+      "weight": "14.5"
     },
     "model": "fleet.VehicleType",
     "pk": 43
@@ -478,7 +478,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Container",
       "length": "24 ft Multi Axel",
-      "weight": "15 Ton"
+      "weight": "15"
     },
     "model": "fleet.VehicleType",
     "pk": 44
@@ -489,7 +489,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Container",
       "length": "32 ft Single Axel",
-      "weight": "6 Ton"
+      "weight": "6"
     },
     "model": "fleet.VehicleType",
     "pk": 45
@@ -500,7 +500,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Container",
       "length": "32 ft Single Axel",
-      "weight": "6.5 Ton"
+      "weight": "6.5"
     },
     "model": "fleet.VehicleType",
     "pk": 46
@@ -511,7 +511,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Container",
       "length": "32 ft Single Axel",
-      "weight": "7 Ton"
+      "weight": "7"
     },
     "model": "fleet.VehicleType",
     "pk": 47
@@ -522,7 +522,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Container",
       "length": "32 ft Single Axel HC",
-      "weight": "6 Ton"
+      "weight": "6"
     },
     "model": "fleet.VehicleType",
     "pk": 48
@@ -533,7 +533,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Container",
       "length": "32 ft Single Axel HC",
-      "weight": "6.5 Ton"
+      "weight": "6.5"
     },
     "model": "fleet.VehicleType",
     "pk": 49
@@ -544,7 +544,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Container",
       "length": "32 ft Single Axel HC",
-      "weight": "7 Ton"
+      "weight": "7"
     },
     "model": "fleet.VehicleType",
     "pk": 50
@@ -555,7 +555,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Container",
       "length": "32 ft Multi Axel",
-      "weight": "14 Ton"
+      "weight": "14"
     },
     "model": "fleet.VehicleType",
     "pk": 51
@@ -566,7 +566,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Container",
       "length": "32 ft Multi Axel",
-      "weight": "14.5 Ton"
+      "weight": "14.5"
     },
     "model": "fleet.VehicleType",
     "pk": 52
@@ -577,7 +577,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Container",
       "length": "32 ft Multi Axel",
-      "weight": "15 Ton"
+      "weight": "15"
     },
     "model": "fleet.VehicleType",
     "pk": 53
@@ -588,7 +588,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Container",
       "length": "32 ft Multi Axel HC",
-      "weight": "14 Ton"
+      "weight": "14"
     },
     "model": "fleet.VehicleType",
     "pk": 54
@@ -599,7 +599,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Container",
       "length": "32 ft Multi Axel HC",
-      "weight": "14.5 Ton"
+      "weight": "14.5"
     },
     "model": "fleet.VehicleType",
     "pk": 55
@@ -610,7 +610,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Container",
       "length": "32 ft Multi Axel HC",
-      "weight": "15 Ton"
+      "weight": "15"
     },
     "model": "fleet.VehicleType",
     "pk": 56
@@ -621,7 +621,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Container",
       "length": "32 ft Multi Axel",
-      "weight": "20 Ton"
+      "weight": "20"
     },
     "model": "fleet.VehicleType",
     "pk": 57
@@ -632,7 +632,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Container",
       "length": "32 ft Multi Axel",
-      "weight": "20.5 Ton"
+      "weight": "20.5"
     },
     "model": "fleet.VehicleType",
     "pk": 58
@@ -643,7 +643,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Container",
       "length": "32 ft Multi Axel",
-      "weight": "21 Ton"
+      "weight": "21"
     },
     "model": "fleet.VehicleType",
     "pk": 59
@@ -654,7 +654,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Container",
       "length": "32 ft Multi Axel HC",
-      "weight": "20 Ton"
+      "weight": "20"
     },
     "model": "fleet.VehicleType",
     "pk": 60
@@ -665,7 +665,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Container",
       "length": "32 ft Multi Axel HC",
-      "weight": "20.5 Ton"
+      "weight": "20.5"
     },
     "model": "fleet.VehicleType",
     "pk": 61
@@ -676,7 +676,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Container",
       "length": "32 ft Multi Axel HC",
-      "weight": "21 Ton"
+      "weight": "21"
     },
     "model": "fleet.VehicleType",
     "pk": 62
@@ -687,7 +687,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Trailer",
       "length": "High bed",
-      "weight": "23 Ton"
+      "weight": "23"
     },
     "model": "fleet.VehicleType",
     "pk": 63
@@ -698,7 +698,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Trailer",
       "length": "High bed",
-      "weight": "28 Ton"
+      "weight": "28"
     },
     "model": "fleet.VehicleType",
     "pk": 64
@@ -709,7 +709,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Trailer",
       "length": "High bed",
-      "weight": "35 Ton"
+      "weight": "35"
     },
     "model": "fleet.VehicleType",
     "pk": 65
@@ -720,7 +720,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Trailer",
       "length": "Low bed",
-      "weight": "23 Ton"
+      "weight": "23"
     },
     "model": "fleet.VehicleType",
     "pk": 66
@@ -731,7 +731,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Trailer",
       "length": "Low bed",
-      "weight": "28 Ton"
+      "weight": "28"
     },
     "model": "fleet.VehicleType",
     "pk": 67
@@ -742,7 +742,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Trailer",
       "length": "Low bed",
-      "weight": "35 Ton"
+      "weight": "35"
     },
     "model": "fleet.VehicleType",
     "pk": 68
@@ -753,7 +753,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Trailer",
       "length": "Semi bed",
-      "weight": "23 Ton"
+      "weight": "23"
     },
     "model": "fleet.VehicleType",
     "pk": 69
@@ -764,7 +764,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Trailer",
       "length": "Semi bed",
-      "weight": "28 Ton"
+      "weight": "28"
     },
     "model": "fleet.VehicleType",
     "pk": 70
@@ -775,7 +775,7 @@
       "last_updated_at": "2018-03-11 00:00:00",
       "type": "Trailer",
       "length": "Semi bed",
-      "weight": "35 Ton"
+      "weight": "35"
     },
     "model": "fleet.VehicleType",
     "pk": 71
