@@ -6,7 +6,7 @@ from django.utils import timezone
 
 class UserIncreasedViewSet(viewsets.ViewSet):
     """
-    A simple ViewSet for listing or retrieving users.
+    A simple ViewSet for retrieving users.
     """
     def retrieve(self, request):
         total_users = User.objects.all().count()
@@ -20,7 +20,7 @@ class UserIncreasedViewSet(viewsets.ViewSet):
 
 class TonnageIncreasedViewSet(viewsets.ViewSet):
     """
-    A simple ViewSet for listing or retrieving users.
+    A simple ViewSet for listing or retrieving tonnage.
     """
     def retrieve(self, request):
         return Response(
@@ -32,7 +32,7 @@ class TonnageIncreasedViewSet(viewsets.ViewSet):
 
 class LeadIncreasedViewSet(viewsets.ViewSet):
     """
-    A simple ViewSet for listing or retrieving users.
+    A simple ViewSet for listing or retrieving leads.
     """
     def retrieve(self, request):
         return Response(
