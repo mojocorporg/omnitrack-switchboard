@@ -42,7 +42,7 @@ class LeadAdmin(admin.ModelAdmin):
     list_display = [
         "commission_agent", "source", "destination", "departure_date", "vehicle_type", "material_to_carried", "created_at"
     ]
-    list_filter = ["departure_date", "material_to_carried"]
+    list_filter = ["departure_date", "material_to_carried", "created_at"]
 
 
 class QuoteAdmin(admin.ModelAdmin):
