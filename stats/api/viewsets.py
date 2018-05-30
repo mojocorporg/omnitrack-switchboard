@@ -41,3 +41,33 @@ class LeadIncreasedViewSet(viewsets.ViewSet):
                 "last_week": 0
             }
         )
+
+
+class TopDestinationViewSet(viewsets.ViewSet):
+    """
+    Get a simple stats for top destination having max number of leads
+    """
+    def list(self, request):
+        return Response([
+            {
+                "id": 0,
+                "city": "Test",
+                "leads": 123,
+                "tonnage": 63821
+            }
+        ])
+
+
+class TopSourceViewSet(viewsets.ViewSet):
+    """
+    Get a simple stats for top origin points having max number of leads
+    """
+    def list(self, request):
+        return Response([
+            {
+                "id": 0,
+                "city": "Test",
+                "leads": 123,
+                "tonnage": 63821
+            }
+        ])
