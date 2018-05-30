@@ -10,6 +10,7 @@ from .serializers import (
 )
 from rest_framework import filters
 from django_filters.rest_framework import DjangoFilterBackend
+from .filters import LeadFilter
 
 
 class FleetOwnerViewSet(viewsets.ModelViewSet):
@@ -53,7 +54,7 @@ class VehicleTypeViewSet(viewsets.ModelViewSet):
 
 class LeadViewSet(viewsets.ModelViewSet):
     queryset = Lead.objects.all()
-    filter_fields = ("__all__")
+    filter_class = LeadFilter
     filter_backends = (filters.OrderingFilter, DjangoFilterBackend)
     ordering_fields = ('id',)
 
