@@ -6,6 +6,8 @@ from django.utils import timezone
 from datetime import timedelta
 from fleet.models import Lead, VehicleType
 from django.db.models import Sum
+from django.db import connection
+from common.helpers import dictfetchall
 
 
 class UserIncreasedViewSet(viewsets.ViewSet):
@@ -62,14 +64,15 @@ class TopDestinationViewSet(viewsets.ViewSet):
     Get a simple stats for top destination having max number of leads
     """
     def list(self, request):
-        return Response([
-            {
-                "id": 0,
-                "city": "Test",
-                "leads": 123,
-                "tonnage": 63821
-            }
-        ])
+        with connection.cursor() as cursor:
+            cursor.execute("""
+                SELECT COUNT(*) as leads, cc.name as city, SUM(fv.weight) as tonnage FROM fleet_lead AS fl
+                JOIN common_city AS cc ON fl.source_id = cc.id
+                JOIN fleet_vehicletype AS fv ON fl.vehicle_type_id = fv.id
+                GROUP BY cc.name ORDER BY leads desc LIMIT 5
+            """)
+            data = dictfetchall(cursor)
+        return Response(data)
 
 
 class TopSourceViewSet(viewsets.ViewSet):
@@ -77,11 +80,12 @@ class TopSourceViewSet(viewsets.ViewSet):
     Get a simple stats for top origin points having max number of leads
     """
     def list(self, request):
-        return Response([
-            {
-                "id": 0,
-                "city": "Test",
-                "leads": 123,
-                "tonnage": 63821
-            }
-        ])
+        with connection.cursor() as cursor:
+            cursor.execute("""
+                SELECT COUNT(*) as leads, cc.name as city, SUM(fv.weight) as tonnage FROM fleet_lead AS fl
+                JOIN common_city AS cc ON fl.destination_id = cc.id
+                JOIN fleet_vehicletype AS fv ON fl.vehicle_type_id = fv.id
+                GROUP BY cc.name ORDER BY leads desc LIMIT 5
+            """)
+            data = dictfetchall(cursor)
+        return Response(data)
