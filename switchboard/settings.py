@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 
 import os
 import json
+from django.core.exceptions import ImproperlyConfigured
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -54,10 +55,12 @@ INSTALLED_APPS = [
     'common.apps.CommonConfig',
     'fleet.apps.FleetConfig',
     'agent.apps.AgentConfig',
+    'phone_login',
     'rest_framework',
     'django_filters',
     'rest_framework.authtoken',
     'rest_framework_swagger',
+    'simple_history',
 ]
 
 MIDDLEWARE = [
@@ -68,6 +71,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'simple_history.middleware.HistoryRequestMiddleware',
 ]
 
 ROOT_URLCONF = 'switchboard.urls'
@@ -160,3 +164,14 @@ STATIC_URL = '/static/'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# SMS Backend with Solution Infini
+SOLUTIONSINFINI_URI = 'https://api-alerts.solutionsinfini.com/v4/'
+SOLUTIONSINFINI_API_KEY = "Af07a4dcf2c6eb308727f0c5b23163ffc"
+
+# Configure the SENDSMS_BACKEND (for django-sendsms integration)
+
+SENDSMS_BACKEND = 'common.helpers.CustomSMSBackend' #(defaults to 'sendsms.backends.console.SmsBackend')
+SENDSMS_FROM_NUMBER = "+XXxxxxxxxxxx"
+SENDSMS_ACCOUNT_SID = 'ACXXXXXXXXXXXXXX'
+SENDSMS_AUTH_TOKEN = 'xxxxxxxx'

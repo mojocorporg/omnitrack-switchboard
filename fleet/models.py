@@ -2,6 +2,7 @@ from django.contrib.postgres.fields import JSONField
 from django.db import models
 from common.models import TimeStampModel
 from django.contrib.auth.models import User
+from simple_history.models import HistoricalRecords
 
 
 # Create your models here.
@@ -81,6 +82,11 @@ class VehicleType(TimeStampModel):
         return self.type + "(" + self.length + ", " + str(self.weight) + " Ton)"
 
 
+class VehicleStatus(TimeStampModel):
+    """Model for Vehicle Status"""
+    status = models.CharField(max_length=100)
+
+
 class Vehicle(TimeStampModel):
     """Model for Vehicle."""
 
@@ -97,6 +103,20 @@ class Vehicle(TimeStampModel):
     body_type = models.CharField(max_length=255, null=True, blank=True)
     fuel_type = models.CharField(max_length=100, choices=FUEL_TYPE_CHOICE)
     color = models.CharField(max_length=255, null=True, blank=True)
+    source = models.ForeignKey(
+        "common.City",
+        on_delete=models.CASCADE,
+        related_name="vehicle_source", db_index=True,
+        null=True, blank=True
+    )
+    destination = models.ForeignKey(
+        "common.City",
+        on_delete=models.CASCADE,
+        related_name="vehicle_destination", db_index=True,
+        null=True, blank=True
+    )
+    arrival_date = models.DateField(blank=True, null=True)
+    status = models.ForeignKey(VehicleStatus, on_delete=models.CASCADE, db_index=True, null=True, blank=True)
     meta = JSONField(default=meta_default)
     fleet_owner = models.ForeignKey(
         "FleetOwner",
@@ -106,6 +126,7 @@ class Vehicle(TimeStampModel):
         VehicleType, on_delete=models.CASCADE,
         null=True, blank=True
     )
+    history = HistoricalRecords()
 
     def __str__(self):
         return self.registration_number

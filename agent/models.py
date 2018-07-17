@@ -1,6 +1,6 @@
 from django.contrib.postgres.fields import JSONField
 from django.db import models
-from common.models import TimeStampModel
+from common.models import TimeStampModel, State
 from django.contrib.auth.models import User
 
 
@@ -16,7 +16,7 @@ class CommissionAgent(TimeStampModel):
     company_name = models.CharField(max_length=250, null=True, blank=True)
     company_address = models.CharField(max_length=250, null=True, blank=True)
     phone = models.CharField(max_length=15)
-    hub = models.CharField(max_length=15)
+    hub = models.ManyToManyField(State, db_index=True, blank=True)
     meta = JSONField(default=meta_default)
 
     def __str__(self):

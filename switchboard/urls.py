@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, reverse, re_path
-from django.conf.urls import include
+from django.conf.urls import include, url
 from django.views.generic.base import RedirectView
 from rest_framework.authtoken import views as authtoken_views
 from rest_framework_swagger.views import get_swagger_view
@@ -37,6 +37,11 @@ urlpatterns = [
 # Auth Token URL's
 urlpatterns.append(
     path('api-token-auth/', get_auth_token)
+)
+
+# Phone Login
+urlpatterns.append(
+    path('phone_login/', include('phone_login.urls'), name='phone_login')
 )
 
 schema_view = get_swagger_view(title='Switchboard API')
