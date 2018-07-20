@@ -17,6 +17,7 @@ import datetime
 class GenerateOTP(CreateAPIView):
     queryset = PhoneToken.objects.all()
     serializer_class = PhoneTokenCreateSerializer
+    permission_classes = ()
 
     def post(self, request, format=None):
         # Get the patient if present or result None.
@@ -47,6 +48,7 @@ class ValidateOTP(CreateAPIView):
 
     queryset = PhoneToken.objects.all()
     serializer_class = PhoneTokenValidateSerializer
+    permission_classes = ()
 
     def post(self, request, format=None):
         # Get the patient if present or result None.
