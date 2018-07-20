@@ -52,10 +52,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'users.apps.UsersConfig',
     'common.apps.CommonConfig',
     'fleet.apps.FleetConfig',
     'agent.apps.AgentConfig',
-    'phone_login',
+    'phonenumber_field',
     'rest_framework',
     'django_filters',
     'rest_framework.authtoken',
@@ -79,7 +80,7 @@ ROOT_URLCONF = 'switchboard.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

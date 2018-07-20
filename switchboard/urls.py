@@ -32,17 +32,18 @@ urlpatterns = [
     path('common/', include('common.urls')),
     path('agent/', include('agent.urls')),
     path('stats/', include('stats.urls')),
+    path('users/', include('users.urls')),
 ]
 
 # Auth Token URL's
 urlpatterns.append(
     path('api-token-auth/', get_auth_token)
 )
-
-# Phone Login
-urlpatterns.append(
-    path('phone_login/', include('phone_login.urls'), name='phone_login')
-)
+#
+## Phone Login
+#urlpatterns.append(
+#    path('phone_login/', include('phone_login.urls'), name='phone_login')
+#)
 
 schema_view = get_swagger_view(title='Switchboard API')
 

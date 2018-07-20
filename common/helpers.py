@@ -26,7 +26,6 @@ class CustomSMSBackend(BaseSmsBackend):
                         "&to=" + to +
                         "&sender=XPMOJO"
                     )
-                    import pdb; pdb.set_trace()
                 except:
                     if not self.fail_silently:
                         raise
