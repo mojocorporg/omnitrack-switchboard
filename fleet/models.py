@@ -118,8 +118,8 @@ class Vehicle(TimeStampModel):
     arrival_date = models.DateField(blank=True, null=True)
     status = models.ForeignKey(VehicleStatus, on_delete=models.CASCADE, db_index=True, null=True, blank=True)
     meta = JSONField(default=meta_default)
-    fleet_owner = models.ForeignKey(
-        "FleetOwner",
+    commission_agent = models.ForeignKey(
+        "agent.CommissionAgent",
         on_delete=models.CASCADE
     )
     vehicle_type = models.ForeignKey(
