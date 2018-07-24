@@ -41,11 +41,11 @@ def user_detail(user, last_login):
         token = Token.objects.create(user=user)
         token = token.key
     try:
-        ca = CommissionAgentSerializer(user.commissionagent).data()
+        ca = CommissionAgentSerializer(user.commissionagent).data
     except ObjectDoesNotExist:
         ca = dict()
     try:
-        fo = FleetOwnerSerializer(user.fleetowner).data()
+        fo = FleetOwnerSerializer(user.fleetowner).data
     except ObjectDoesNotExist:
         fo = dict()
     user_json = {
