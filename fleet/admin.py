@@ -33,7 +33,7 @@ class FeedAdmin(admin.ModelAdmin):
 
 
 class VehicleAdmin(admin.ModelAdmin):
-    list_display = ["registration_number", "fleet_owner", "brand", "model", "fuel_type", "color", "vehicle_type"]
+    list_display = ["registration_number", "commission_agent", "brand", "model", "fuel_type", "color", "vehicle_type"]
     list_filter = ["color", "fuel_type"]
     search_fields = ["registration_number"]
 
