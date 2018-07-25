@@ -7,5 +7,5 @@ class CommissionAgentSerializer(serializers.ModelSerializer):
         model = CommissionAgent
         fields = (
             "id", "profile_pic", "agent", "phone", "hub", "company_name",
-            "company_address", "meta"
+            "company_address", "meta", "agent_type"
         )
