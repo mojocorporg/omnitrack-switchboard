@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'common.apps.CommonConfig',
     'fleet.apps.FleetConfig',
     'agent.apps.AgentConfig',
+    'transporter.apps.TransporterConfig',
     'phonenumber_field',
     'rest_framework',
     'django_filters',

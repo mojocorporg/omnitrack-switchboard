@@ -166,6 +166,11 @@ class Lead(TimeStampModel):
         "agent.CommissionAgent",
         on_delete=models.CASCADE, db_index=True
     )
+    transporter = models.ForeignKey(
+        "transporter.Transporter",
+        on_delete=models.CASCADE, db_index=True,
+        null=True, blank=True
+    )
     source = models.ForeignKey(
         "common.City",
         on_delete=models.CASCADE,
@@ -199,6 +204,10 @@ class Quote(TimeStampModel):
     title = models.CharField(max_length=200, null=True, blank=True)
     lead = models.ForeignKey(
         Lead, on_delete=models.CASCADE
+    )
+    fleet_owner = models.ForeignKey(
+        FleetOwner, on_delete=models.CASCADE, db_index=True,
+        null=True, blank=True
     )
     commission_agent = models.ForeignKey(
         "agent.CommissionAgent",

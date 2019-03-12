@@ -8,3 +8,5 @@ pillow
 django-simple-history==2.2.0
 django-phonenumber-field
 django-sendsms
+phonenumbers
+mysqlclient
