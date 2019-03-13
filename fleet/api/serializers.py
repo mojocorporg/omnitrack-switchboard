@@ -70,7 +70,7 @@ class LeadSerializer(serializers.ModelSerializer):
     class Meta:
         model = Lead
         fields = (
-            "id" ,"commission_agent", "departure_time", "departure_date",
+            "id" ,"transporter", "commission_agent", "departure_time", "departure_date",
             "source", "destination", "vehicle_type", "material_to_carried", "weight"
         )
 
@@ -86,7 +86,7 @@ class QuoteSerializer(serializers.ModelSerializer):
     class Meta:
         model = Quote
         fields = ("id", "lead", "commission_agent", "vehicle", "price",
-        "currency", "etd")
+        "currency", "etd", "fleet_owner")
 
 
 class JobListSerializer(serializers.ModelSerializer):

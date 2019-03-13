@@ -11,5 +11,5 @@ class LeadFilter(filters.FilterSet):
         model = Lead
         fields = [
             "gte_created_at", "gte_departure_date", "commission_agent", "source",
-            "destination", "vehicle_type"
+            "destination", "vehicle_type", "transporter"
         ]

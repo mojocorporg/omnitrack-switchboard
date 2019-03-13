@@ -18,7 +18,7 @@ class Transporter(TimeStampModel):
     meta = JSONField(default=meta_default)
 
     def __str__(self):
-        return self.fleet_owner.username
+        return self.transporter.username
 
     class Meta:
         verbose_name_plural = "Transporters"

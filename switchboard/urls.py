@@ -33,6 +33,7 @@ urlpatterns = [
     path('agent/', include('agent.urls')),
     path('stats/', include('stats.urls')),
     path('users/', include('users.urls')),
+    path('transporter/', include('transporter.urls')),
 ]
 
 # Auth Token URL's
